@@ -1,0 +1,284 @@
+// [RCD] 
+Val
+{
+	_E_CLEAR(default=#FFFFFF, disp=0)
+	_ID1_1_A_AILERON_L(default=0, min=-999999999999999, disp=0)
+	_ID1_1_A_AILERON_R(default=0, min=-999999999999999, disp=0)
+	_ID1_1_A_CANARD_L(default=0, min=-999999999999999, disp=0)
+	_ID1_1_A_CANARD_R(default=0, min=-999999999999999, disp=0)
+	_ID1_1_A_ELEVATOR_L(default=90, min=-999999999999999, disp=0)
+	_ID1_1_A_ELEVATOR_R(default=90, min=-999999999999999, disp=0)
+	_ID1_1_A_ENGINE_X_L(default=90, min=-999999999999999, disp=0)
+	_ID1_1_A_ENGINE_X_R(default=90, min=-999999999999999, disp=0)
+	_ID1_1_A_ENGINE_Y_L(default=0, min=-999999999999999, disp=0)
+	_ID1_1_A_ENGINE_Y_R(default=0, min=-999999999999999, disp=0)
+	_ID1_1_A_GEAR_F(default=180, min=55, max=180, disp=0)
+	_ID1_1_A_GEAR_R_1(default=180, min=30, max=180, disp=0)
+	_ID1_1_A_GEAR_R_2(default=180, min=60, max=180, disp=0)
+	_ID1_1_A_RUDDER_L(default=0, min=-999999999999999, disp=0)
+	_ID1_1_A_RUDDER_M(default=180, min=-999999999999999, disp=0)
+	_ID1_1_A_RUDDER_R(default=0, min=-999999999999999, disp=0)
+	_ID1_1_A_SWEEPBACK(default=110, min=-999999999999999, disp=0)
+	_ID1_1_C_BODY1(default=0, disp=0)
+	_ID1_1_C_BODY1_COWL(default=0, disp=0)
+	_ID1_1_C_CARBON(default=0, disp=0)
+	_ID1_1_C_CARBON_COWL(default=0, disp=0)
+	_ID1_1_E_BODY1_COWL(default=0, disp=0)
+	_ID1_1_E_CARBON_COWL(default=0, disp=0)
+	_ID1_1_P_ENGINE_L(default=0, min=-999999999999999, disp=0)
+	_ID1_1_P_ENGINE_R(default=0, min=-999999999999999, disp=0)
+}
+Key
+{
+}
+Body
+{
+	Core(color=_ID1_1_C_BODY1) {
+		S:Jet(color=_ID1_1_C_BODY1, name=_ID1_1_N_SEN_MAIN) {
+			S:Jet(angle=17, color=_ID1_1_C_BODY1) {
+				S:Jet(color=_ID1_1_C_BODY1) {
+					S:Chip(angle=-17, color=_ID1_1_C_BODY1) {
+						E:Jet(color=_ID1_1_C_BODY1) {
+							S:TrimF(angle=90, option=1, color=1) {
+								N:Jet(color=_ID1_1_C_BODY1) {
+									S:Chip(angle=_ID1_1_A_RUDDER_R, option=1, color=_ID1_1_C_BODY1) {
+										W:Rudder(angle=-120, color=_ID1_1_C_BODY1) { }
+										E:Rudder(angle=120, color=_ID1_1_C_BODY1) {
+											W:Cowl(color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) { }
+										}
+									}
+								}
+							}
+							E:Trim(angle=_ID1_1_A_AILERON_R, color=_ID1_1_C_BODY1) {
+								W:Rudder(angle=-_ID1_1_A_SWEEPBACK, color=_ID1_1_C_BODY1) {
+									S:Trim(color=_ID1_1_C_BODY1) {
+										S:Trim(color=_ID1_1_C_BODY1) { }
+									}
+								}
+							}
+							E:Frame(angle=_ID1_1_A_GEAR_R_1, color=_ID1_1_C_BODY1) {
+								E:Wheel(angle=_ID1_1_A_GEAR_R_2, color=_ID1_1_C_BODY1) { }
+							}
+							E:Cowl(option=1, color=_ID1_1_C_BODY1_COWL, effect=_E_CLEAR) {
+								N:Cowl(angle=90, option=1, effect=_E_CLEAR) {
+									E:Cowl(angle=-139, option=1, effect=_E_CLEAR) {
+										S:Cowl(angle=-92, color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) {
+											E:Cowl(angle=22, option=4, color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) { }
+										}
+									}
+								}
+							}
+							N:Cowl(angle=-123, option=1, color=_ID1_1_C_BODY1_COWL, effect=_E_CLEAR) {
+								N:Cowl(angle=-76, option=1, color=_ID1_1_C_BODY1_COWL, effect=_E_CLEAR) {
+									N:Cowl(angle=-150, color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) {
+										N:Cowl(color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) {
+											E:Cowl(angle=90, option=3, color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) { }
+											W:Cowl(angle=90, option=4, color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) { }
+										}
+										E:Cowl(angle=90, color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) {
+											S:Cowl(angle=90, option=1, color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) {
+												E:Cowl(angle=80, color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) {
+													S:Cowl(angle=92, color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) { }
+													N:Cowl(angle=92, color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) { }
+													E:Cowl(angle=29, color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) {
+														S:Cowl(angle=92, option=5, color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) { }
+														N:Cowl(angle=92, option=5, color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) { }
+														E:Cowl(angle=45, option=1, color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) {
+															S:Cowl(angle=92, option=3, color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) { }
+															N:Cowl(angle=92, option=4, color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) { }
+														}
+													}
+												}
+											}
+										}
+										W:Cowl(angle=90, color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) { }
+									}
+								}
+							}
+						}
+						W:Jet(color=_ID1_1_C_BODY1) {
+							S:TrimF(angle=90, option=1, color=1) {
+								N:Jet(color=_ID1_1_C_BODY1) {
+									S:Chip(angle=_ID1_1_A_RUDDER_L, option=1, color=_ID1_1_C_BODY1) {
+										E:Rudder(angle=120, color=_ID1_1_C_BODY1) {
+											W:Cowl(color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) { }
+										}
+										W:Rudder(angle=-120, color=_ID1_1_C_BODY1) { }
+									}
+								}
+							}
+							W:Trim(angle=_ID1_1_A_AILERON_L, color=_ID1_1_C_BODY1) {
+								E:Rudder(angle=_ID1_1_A_SWEEPBACK, color=_ID1_1_C_BODY1) {
+									S:Trim(color=_ID1_1_C_BODY1) {
+										S:Trim(color=_ID1_1_C_BODY1) { }
+									}
+								}
+							}
+							W:Frame(angle=_ID1_1_A_GEAR_R_1, color=_ID1_1_C_BODY1) {
+								W:Wheel(angle=_ID1_1_A_GEAR_R_2, color=_ID1_1_C_BODY1) { }
+							}
+							W:Cowl(option=1, color=_ID1_1_C_BODY1_COWL, effect=_E_CLEAR) {
+								N:Cowl(angle=90, option=1, effect=_E_CLEAR) {
+									W:Cowl(angle=-139, option=1, effect=_E_CLEAR) {
+										S:Cowl(angle=-92, color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) {
+											W:Cowl(angle=22, option=3, color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) { }
+										}
+									}
+								}
+							}
+							N:Cowl(angle=-123, option=1, color=_ID1_1_C_BODY1_COWL, effect=_E_CLEAR) {
+								N:Cowl(angle=-76, option=1, color=_ID1_1_C_BODY1_COWL, effect=_E_CLEAR) {
+									N:Cowl(angle=-150, color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) {
+										N:Cowl(color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) {
+											E:Cowl(angle=90, option=3, color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) { }
+											W:Cowl(angle=90, option=4, color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) { }
+										}
+										E:Cowl(angle=90, color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) { }
+										W:Cowl(angle=90, color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) {
+											S:Cowl(angle=90, option=1, color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) {
+												W:Cowl(angle=80, color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) {
+													N:Cowl(angle=92, color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) { }
+													S:Cowl(angle=92, color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) { }
+													W:Cowl(angle=29, color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) {
+														N:Cowl(angle=92, option=5, color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) { }
+														S:Cowl(angle=92, option=5, color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) { }
+														W:Cowl(angle=45, option=1, color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) {
+															N:Cowl(angle=92, option=3, color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) { }
+															S:Cowl(angle=92, option=4, color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) { }
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+						N:Frame(angle=90, option=1) {
+							E:Arm(angle=-90, power=10000, color=_ID1_1_C_BODY1) { }
+							W:Arm(angle=-90, power=10000, color=_ID1_1_C_BODY1) { }
+						}
+						N:Frame(angle=150, option=1) {
+							W:Arm(angle=-90, color=_ID1_1_C_BODY1) { }
+							E:Arm(angle=-90, color=_ID1_1_C_BODY1) { }
+						}
+						N:Frame(angle=150, option=1) {
+							W:Arm(angle=-90, color=_ID1_1_C_BODY1) { }
+							E:Arm(angle=-90, color=_ID1_1_C_BODY1) { }
+						}
+						N:Cowl(angle=-170, option=1, color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) {
+							N:Cowl(angle=170, option=5, color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) {
+								S:Cowl(option=5, color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) { }
+							}
+						}
+						S:Chip(color=_ID1_1_C_BODY1) {
+							W:TrimF(angle=_ID1_1_A_ENGINE_X_L, option=1) {
+								S:TrimF(angle=_ID1_1_A_ENGINE_Y_L, option=1) {
+									N:Jet(power=_ID1_1_P_ENGINE_L, color=_ID1_1_C_BODY1) {
+										S:Cowl(angle=105, color=#232323, effect=_ID1_1_E_BODY1_COWL) {
+											S:Cowl(angle=-10, option=5, color=#232323, effect=_ID1_1_E_BODY1_COWL) { }
+										}
+										N:Cowl(angle=105, color=#232323, effect=_ID1_1_E_BODY1_COWL) {
+											N:Cowl(angle=-10, option=5, color=#232323, effect=_ID1_1_E_BODY1_COWL) { }
+										}
+										W:Cowl(angle=90, option=5, color=#232323, effect=_ID1_1_E_BODY1_COWL) { }
+										E:Cowl(angle=90, option=5, color=#232323, effect=_ID1_1_E_BODY1_COWL) { }
+									}
+								}
+								W:TrimF(angle=_ID1_1_A_ELEVATOR_L, option=1) {
+									E:Rudder(angle=-140, color=_ID1_1_C_BODY1) { }
+								}
+							}
+							E:TrimF(angle=-_ID1_1_A_ENGINE_X_R, option=1) {
+								S:TrimF(angle=_ID1_1_A_ENGINE_Y_R, option=1) {
+									N:Jet(power=_ID1_1_P_ENGINE_R, color=_ID1_1_C_BODY1) {
+										W:Cowl(angle=90, option=5, color=#232323, effect=_ID1_1_E_BODY1_COWL) { }
+										E:Cowl(angle=90, option=5, color=#232323, effect=_ID1_1_E_BODY1_COWL) { }
+										N:Cowl(angle=105, color=#232323, effect=_ID1_1_E_BODY1_COWL) {
+											N:Cowl(angle=-10, option=5, color=#232323, effect=_ID1_1_E_BODY1_COWL) { }
+										}
+										S:Cowl(angle=105, color=#232323, effect=_ID1_1_E_BODY1_COWL) {
+											S:Cowl(angle=-10, option=5, color=#232323, effect=_ID1_1_E_BODY1_COWL) { }
+										}
+									}
+								}
+								E:TrimF(angle=-_ID1_1_A_ELEVATOR_R, option=1) {
+									W:Rudder(angle=140, color=_ID1_1_C_BODY1) { }
+								}
+							}
+						}
+					}
+					E:Cowl(option=1, effect=_E_CLEAR) {
+						E:Cowl(angle=90, option=1, effect=_E_CLEAR) {
+							S:Cowl(angle=161, option=1, effect=_E_CLEAR) {
+								W:Cowl(angle=-90, color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) {
+									S:Cowl(color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) {
+										S:Cowl(angle=-17, option=5, color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) { }
+									}
+								}
+							}
+						}
+					}
+					W:Cowl(option=1, effect=_E_CLEAR) {
+						W:Cowl(angle=90, option=1, effect=_E_CLEAR) {
+							S:Cowl(angle=161, option=1, effect=_E_CLEAR) {
+								E:Cowl(angle=-90, color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) {
+									S:Cowl(color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) {
+										S:Cowl(angle=-17, option=5, color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) { }
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			E:TrimF(angle=_ID1_1_A_CANARD_R, option=1) {
+				W:Rudder(angle=140, color=_ID1_1_C_BODY1) { }
+			}
+			W:TrimF(angle=-_ID1_1_A_CANARD_L, option=1) {
+				E:Rudder(angle=-140, color=_ID1_1_C_BODY1) { }
+			}
+			N:TrimF(angle=90, option=1) {
+				S:Jet(color=_ID1_1_C_BODY1) {
+					N:Chip(angle=_ID1_1_A_RUDDER_M, color=_ID1_1_C_BODY1) {
+						E:RudderF(angle=-_ID1_1_A_GEAR_F, option=1, spring=0.2, damper=0.2) {
+							S:Wheel(brake=100, color=_ID1_1_C_BODY1) { }
+						}
+					}
+				}
+			}
+			N:Cowl(option=1, color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) { }
+			N:Cowl(color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) { }
+			N:Cowl(angle=-20, option=1, color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) {
+				N:Cowl(angle=30, color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) {
+					N:Cowl(color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) {
+						N:Cowl(color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) { }
+					}
+					S:Cowl(color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) { }
+				}
+			}
+			N:Chip(color=_ID1_1_C_BODY1) { }
+		}
+	}
+}
+Lua
+{spirytus = {};
+	open_spirytus = loadlib("./Spirytus.DLL", "rc_OpenSpirytus");
+	open_spirytus();
+require("ttata/color.lua")
+require("hikeo/stdlib.lua")
+require("cel/Science/BasePhysic.lua")
+require "Boot"{
+	"cel/Equa",
+	"ttata/Material",
+	"ttata/FileIO",
+	"ttata/VModeler",
+	"ttata/Graphics",
+	"ttata/Input",
+	"ttata/Spine",
+	"ttata/Model/TRP51_A1"
+}
+
+function OnFrame()
+	CallSpine(trit.model.TRP51_A1)
+end}
