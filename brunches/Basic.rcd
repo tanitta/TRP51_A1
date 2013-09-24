@@ -16,3 +16,6 @@ Body
 		S:Chip() { }
 	}
 }
+Lua
+{
+}

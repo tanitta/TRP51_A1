@@ -29,7 +29,7 @@ namespace"trit"{
 				
 				metamethod"__call"
 				:body(function(self)
-					out(2,self.booUp)
+					-- out(2,self.booUp)
 					if self.booUp then
 						self.angGear.F = ang(self.angGear.F,180,(180-55)/self.numStep)
 						self.angGear.R1 = ang(self.angGear.R1,180,(180-30)/self.numStep)

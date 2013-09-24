@@ -59,7 +59,7 @@ namespace"trit"{
 	    	method"Value"
 	    	:attributes(override)
 	    	:body(function(self)
-	    		out(0,_VZ(1)*3.6.."km/h")
+	    		-- out(0,_VZ(1)*3.6.."km/h")
 
 				self.objECS:Value()
 				self.objTVCS:Value()
