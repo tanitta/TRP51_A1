@@ -248,7 +248,13 @@ Body
 				}
 			}
 			N:Cowl(option=1, color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) { }
-			N:Cowl(color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) { }
+			S:Cowl(angle=135, option=1, color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) {
+				S:Cowl(angle=50, color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) {
+					N:Cowl(angle=10, color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) {
+						N:Cowl(color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) { }
+					}
+				}
+			}
 			N:Cowl(angle=-20, option=1, color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) {
 				N:Cowl(angle=30, color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) {
 					N:Cowl(color=_ID1_1_C_BODY1_COWL, effect=_ID1_1_E_BODY1_COWL) {
