@@ -15,8 +15,8 @@ namespace"trit"{
 			    	
 			    	method"Value"
 			    	:body(function(self)
-						self:SetGlobalValue("P_ENGINE_L",400000)
-	    				self:SetGlobalValue("P_ENGINE_R",400000)
+						self:SetGlobalValue("P_ENGINE_L",0)
+	    				self:SetGlobalValue("P_ENGINE_R",0)
 			    	end);
 			};
 		}

@@ -1,10 +1,9 @@
 // [RCD] 
 Val
 {
-	VAR_1(default=0, min=-1, max=1, step=1, disp=1)
 	VAR2(default=0, min=-1, max=1)
-	
 	VAR3(default=0, min=-1, max=1)
+	VAR_1(default=0, min=-1, max=1, step=1)
 }
 Key
 {
@@ -12,8 +11,12 @@ Key
 Body
 {
 	Core() {
-		N:Chip() { }
-		S:Chip() { }
+		N:Chip() {
+			E:Chip() { }
+		}
+		S:Chip() {
+			W:Chip() { }
+		}
 	}
 }
 Lua

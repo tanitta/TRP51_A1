@@ -11,7 +11,7 @@ namespace"trit"{
 					self.SetGlobalValue = fncSGV
 					self.GetGlobalValue = fncGGV
 					
-					self.booUp = true
+					self.booUp = false
 					self.numStep = 30
 					
 					self.angGear = {
